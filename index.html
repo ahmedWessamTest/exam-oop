@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <!--?========> Favicon <========-->
+    <link rel="icon" href="./images/quiz.png" />
+    <!--?========> Google Fonts <========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Electrolize&display=swap"
+      rel="stylesheet"
+    />
+    <!--?========> Bootstrap Icons <========-->
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <!--?========> Bootstrap Style Sheet <========-->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <!--?========> Animate.CSS <========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!--?========> Main style Sheet <========-->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <main
+      class="min-vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="heading">
+        <h1 class="mb-0">Quiz App</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <form
+            class="start-quiz col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__backInDown"
+            id="quizForm"
+          >
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="categoryMenu"
+                aria-label="category Select"
+              >
+                <option selected value="">Any Category</option>
+                <option value="9">General Knowledge</option>
+                <option value="27">Animals</option>
+                <option value="19">Science: Mathematics</option>
+                <option value="18">Science: Computers</option>
+                <option value="22">Geography</option>
+              </select>
+              <label for="categoryMenu">Choose Category</label>
+            </div>
+
+            <div class="form-floating">
+              <select
+                class="form-select"
+                id="difficultyOptions"
+                aria-label="difficulty Select"
+              >
+                <option selected value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+              <label for="difficultyOptions">Choose Difficulty Level</label>
+            </div>
+
+            <div class="form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="questionsNumber"
+                placeholder="Number of Questions"
+              />
+              <label for="QuestionsNumber">Number of Questions</label>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-start rounded-pill"
+              id="startQuiz"
+            >
+              Start
+            </button>
+          </form>
+
+          <div id="questionsContainer"></div>
+          <!-- <div id="tryAgainContainer" class="text-center text-white">
+              <h1>Your Score is <span>5</span></h1>
+              <button class="btn btn-danger">Try Again</button>
+          </div> -->
+        </div>
+      </div>
+    </main>
+    <!--!========> JS Main file <========-->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
+
+<!-- `
+ ====question cartona======
+    <div
+      class="question shadow-lg col-lg-6 offset-lg-3  p-4 rounded-3 d-flex flex-column justify-content-center align-items-center gap-3 animate__animated animate__bounceIn"
+    >
+      <div class="w-100 d-flex justify-content-between">
+        <span class="btn btn-category"> category </span>
+        <span class="fs-6 btn btn-questions"> 0 of 5 Questions</span>
+      </div>
+      <h2 class="text-capitalize h4 text-center"> question </h2>  
+      <ul class="choices w-100 list-unstyled m-0 d-flex flex-wrap text-center">
+        <li> choice 1 </li>
+        <li> choice 2 </li>
+        <li> choice 3 </li>
+        <li> choice 4 </li> 
+      </ul>
+      <h2 class="text-capitalize text-center score-color h3 fw-bold"><i class="bi bi-emoji-laughing"></i> Score: 0 </h2>        
+    </div>
+  ` -->
+
